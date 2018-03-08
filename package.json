@@ -1,0 +1,19 @@
+{
+  "name": "antdoor",
+  "version": "1.0.0",
+  "description": "a simple node static resource server",
+  "main": "index.js",
+  "repository": "https://github.com/SryanZY/antdoor.git",
+  "author": "SryanZY",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "chalk": "^2.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2"
+  }
+}
