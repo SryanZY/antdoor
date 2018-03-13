@@ -1,5 +1,5 @@
 const http = require('http');
-const chalk = require('chalk'); // 色彩画console
+const chalk = require('chalk'); // 色彩化输出
 const conf = require('./config/defaultConfig');
 
 http.createServer((req, res) => {
