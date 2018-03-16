@@ -10,7 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "chalk": "^2.3.2"
+    "chalk": "^2.3.2",
+    "handlebars": "^4.0.11"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
