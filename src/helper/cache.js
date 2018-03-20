@@ -3,17 +3,20 @@ const {cache} = require('../config/defaultConfig');
 function refreshRes (stats, res) {
     const {maxAge, expires, cacheControl, lastModified, etag} = cache;
 
+    /* 本地校验，现在大多使用cacheControl */
     if (expires) {
         res.setHeader('Expires', (new Date(Date.now() + maxAge * 1000)).toUTCString());
     }
     if (cacheControl) {
         res.setHeader('Cache-Control', `public, max-age=${maxAge}`);
     }
+    /* 向服务器校验 */
     if (lastModified) {
         res.setHeader('Last-Modified', stats.mtime.toUTCString());
     }
     if (etag) {
         res.setHeader('ETag', stats.mtime.toUTCString());
+        /* stats.mtime- 修改时间 */
     }
 }
 
